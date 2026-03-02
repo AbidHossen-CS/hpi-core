@@ -1,33 +1,39 @@
 # Humanitarian Proof Infrastructure (HPI) 
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Status: Concept/Research](https://img.shields.io/badge/Status-Concept%2FResearch-orange.svg)]()
+[![Python Tests](https://github.com/AbidHossen-CS/hpi-core/actions/workflows/python-tests.yml/badge.svg)](https://github.com/AbidHossen-CS/hpi-core/actions/workflows/python-tests.yml)
+![License](https://img.shields.io/badge/License-AGPLv3-blue.svg)
 
-**HPI** is a trust-minimized middleware framework designed to secure humanitarian operations. It utilizes Zero-Knowledge Proofs (ZKP) and Byzantine Fault Tolerant (BFT) logic to verify aid delivery without compromising beneficiary privacy.
-
-
-
-##  Technical Overview
-Current aid systems rely on manual audits. HPI introduces **Computational Accountability** through three core modules:
-
-1. **Proof-of-Impact (POI) Engine:** Anchors field actions to spatial-temporal proofs (Geo-fencing + Time-stamping).
-2. **Privacy Layer:** Uses ZK-SNARKs to provide "Proof of Delivery" without exposing PII (Personally Identifiable Information) to public ledgers.
-3. **BFT Consensus:** Implements randomized validator selection to prevent local collusion among field actors.
-
-##  Project Structure
-* `/docs`: Contains formal technical specifications and research briefs.
-* `/src`: (Pending) Core POI logic and cryptographic circuits.
-* `/sim`: (Pending) Fraud scenario simulation environment.
-
-##  Documentation
-For a deep dive into the mathematical and operational logic of HPI, please refer to the:
- **[HPI Technical Specification (PDF)](https://github.com/AbidHossen-CS/hpi-core/blob/main/docs/HPI_Technical_Specification.pdf)**
-
-##  2026 Roadmap
-* **Q2:** Formal Verification of POI Logic & Threat Model.
-* **Q3:** Alpha Core Engine Development (Python/Node.js).
-* **Q4:** ZKP Circuit Prototype & Lab Simulation.
+HPI is an open-source, trust-minimized framework designed to secure global aid delivery. By replacing narrative-based reporting with a **Proof-of-Impact (POI) engine**, HPI ensures that humanitarian resources are cryptographically verifiable from the field to the funder.
 
 ---
-**Lead Maintainer:** [Abid Hossen](https://github.com/AbidHossen-CS)  
-**Research Domain:** Distributed Systems & Humanitarian Accountability
+
+## Core Feature: Proof-of-Impact (POI) Engine
+
+The heart of HPI is the **POI Engine** (located in `/src`). It addresses the "Byzantine Oracle" problem—ensuring real-world events are accurately recorded in a digital system without relying on a single source of truth.
+
+### Key Capabilities:
+* **Multi-Party Attestation:** Requires $n$ signatures (e.g., Worker + Community Witness) to transition a claim into a "Verified Proof."
+* **Spatio-Temporal Anchoring:** Uses location and time data to create unique, tamper-evident event hashes.
+* **Byzantine Fault Tolerance (BFT):** Designed to resist collusion between field actors.
+
+---
+
+## Technical Architecture
+
+HPI follows a modular, "Privacy-First" design:
+
+* **`/src`**: Contains the core Python logic for proof generation and validation.
+* **`/tests`**: A comprehensive unit testing suite ensuring logic integrity.
+* **`/docs`**: Formal technical specifications and cryptographic research.
+
+
+
+---
+
+## Getting Started
+
+### Installation
+Clone the repository:
+```bash
+git clone [https://github.com/AbidHossen-CS/hpi-core.git](https://github.com/AbidHossen-CS/hpi-core.git)
+cd hpi-core
