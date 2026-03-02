@@ -9,7 +9,7 @@ HPI is an open-source, trust-minimized framework designed to secure global aid d
 
 ## Core Feature: Proof-of-Impact (POI) Engine
 
-The heart of HPI is the **POI Engine** (located in `/src`). It addresses the "Byzantine Oracle" problem—ensuring real-world events are accurately recorded in a digital system without relying on a single source of truth.
+The heart of HPI is the **POI Engine** (located in `/src`). It addresses the "Byzantine Oracle" problem - ensuring real-world events are accurately recorded in a digital system without relying on a single source of truth.
 
 ### Key Capabilities:
 * **Multi-Party Attestation:** Requires $n$ signatures (e.g., Worker + Community Witness) to transition a claim into a "Verified Proof."
